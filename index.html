@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia APP</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="container mt-5">
+        <div>
+            <div class="form-group">
+                <label for="questions-number">Eige cuántas preguntas quieres</label>
+                <select onchange="" class="form-control" id="questions-number">
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="questions-category">Elige la categoría de las preguntas.</label>
+                <select onchange="" class="form-control" id="questions-category">
+                  <option value="0">Todas las categorias</option>
+                
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="questions-difficulty">Elige la dificultad de la pregunta.</label>
+                <select onchange="" class="form-control" id="difficulty">
+                  <option value="">Cualquier dificultad</option>
+                    <option value="easy">Easy</option>
+                  <option value="medium">Medium</option>
+                  <option value="hard">Hard</option>
+               </select>
+              </div>
+              <div class="form-group">
+                <label for="type">Elige el tipo de pregunta</label>
+                <select onchange="" class="form-control" id="type">
+                  <option value="">Cualquier tipo</option>
+                    <option value="multiple">Multiple Choise</option>
+                  <option value="boolean">True/false</option>
+               </select>
+              </div>
+        </div>
+        <!-- Aquí van las tarjetas -->
+        <div>
+        <form onsubmit="event.preventDefault(),validarRespuesta()" method="POST" action="" >
+          <div id="container-cards">
+
+        </div>
+        <button type="button" onclick="carga()" class="btn btn-primary">Carga</button>
+        <button type="submit"  class="btn btn-primary">Enviar Respuestas</button>
+        </form>
+        <div class="containter" id="t-resultados" >
+
+        </div>
+      
+      </div>
+        
+    </div>
+    <script type="module" src="./js/ui.js"></script>
+    
+    
+</body>
+</html>
