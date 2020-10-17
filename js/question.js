@@ -39,12 +39,14 @@ typequestion(questions){
          })
      }
      returnCardHTML(q,index) {
-        const card = `<div class="card">
-                        <div class="card-body">
+        const card = `  <div class ="col-4">
+                        <div class="card border-primary mb-3">
+                        <div class="card-body" style="height:235px">
                         <h5 class="card-title">${q.category}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">${q.question}</h6>
                             ${this.returnAnswersHTML(q.correct_answer, q.incorrect_answers,index)}           
                         </div>
+                    </div>
                     </div>`
         return card;
     }
@@ -115,7 +117,6 @@ typequestion(questions){
  
  validarRespuesta() 
  {
-
      let respchecked = false
      let respvalue = 0
      let sumaresult = 0
@@ -175,13 +176,20 @@ typequestion(questions){
 
           console.log("el resultado es   "+sumaresult);
 
-
+        this.eraseCards()
      tresults.innerHTML = `
      <h3>Estos son los resultados:</h3><br>
            <h3>Tiene ${sumaresult} respuestas correctas</h3><br>
            <h3>Tiene ${cant - sumaresult} respuestas incorrectas</h3><br>`}
      
-
-
- 
+                
+ eraseCards() {
+    const container = document.getElementById('container-cards');
+    container.innerHTML = '';
  }
+ 
+eraseResults() {
+    const tresults = document.getElementById('t-resultados');
+    tresults.innerHTML = '';
+}
+ } 

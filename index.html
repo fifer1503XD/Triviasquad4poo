@@ -7,8 +7,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    
-    <div class="container mt-5">
+  <section class="container  Mr-5 Ml-5 Mt-5 Mb-5">
+    <div class="row">
+      <div class="col-5  text-center">
+      <div class="" style="width:100%; height:50%;"><img class=" img-fluid rounded float-left"  src="./img/trivia.jpg" alt=""></div>
+      <div class=""style="width:100%; height:50%;"><img class=" img-fluid rounded float-left"  src="./img/logo.png" alt=""></div>
+      </div>
+    <div class="col-7  text-center">
+    <h1 class="font-weight-bold"><h1>TRIVIA SQUAD 4</h1>
+    <h2>Selecciona la cantidad de preguntas, categoría, dificultad y tipo de respuesta.</h2>
+        <div class="card border-primary container-md">
+        <div class="container col-lg6">
         <div>
             <div class="form-group">
                 <label for="questions-number">Eige cuántas preguntas quieres</label>
@@ -18,8 +27,8 @@
                   <option value="15">15</option>
                   <option value="20">20</option>
                 </select>
-              </div>
-              <div class="form-group">
+            </div>
+            <div class="form-group">
                 <label for="questions-category">Elige la categoría de las preguntas.</label>
                 <select onchange="" class="form-control" id="questions-category">
                   <option value="0">Todas las categorias</option>
@@ -43,23 +52,39 @@
                   <option value="boolean">True/false</option>
                </select>
               </div>
+             
         </div>
-        <!-- Aquí van las tarjetas -->
-        <div>
-        <form onsubmit="event.preventDefault(),validarRespuesta()" method="POST" action="" >
-          <div id="container-cards">
-
-        </div>
-        <button type="button" onclick="carga()" class="btn btn-primary">Carga</button>
-        <button type="submit"  class="btn btn-primary">Enviar Respuestas</button>
-        </form>
-        <div class="containter" id="t-resultados" >
-
-        </div>
-      
-      </div>
         
+           
+              
+        </div>
+      </div>
+        </div>
     </div>
+  </section>
+  <section class="container  Mr-5 Ml-5 Mt-5 d-flex flex-wrap: wrap">
+    <div  class="row">
+       
+          <div>
+            <form onsubmit="event.preventDefault(),validarRespuesta()" method="POST" action="" >
+              <div id="container-cards"class="d-flex flex-wrap">
+    
+            </div>
+            <button type="button" onclick="carga()" class="btn btn-primary">Carga</button>
+            <button type="submit"  class="btn btn-primary">Enviar Respuestas</button>
+            </form>
+            
+            <div class="containter" id="t-resultados" >
+            </div>
+          </div>
+      </section>
+    </form>
+       
+      
+        </div>
+    </div>
+  </div>
+ 
     <script type="module" src="./js/ui.js"></script>
     
     

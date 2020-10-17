@@ -11,6 +11,7 @@ function carga()
 quest.set("questions-number","questions-category","difficulty","type");
 console.log(quest);
 quest.getQuestion();
+quest.eraseResults()
 }
 function validarRespuesta()
 {
